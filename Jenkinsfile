@@ -25,8 +25,8 @@ pipeline {
       }
       post {
         always {
-          junit 'unit-python.xml'
           cobertura coberturaReportFile: 'cov-python.xml'
+          junit 'unit-python.xml'
         }
       }
     }
