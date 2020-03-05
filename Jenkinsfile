@@ -25,14 +25,6 @@ pipeline {
       }
       post {
         always {
-          publishHTML target: [
-            allowMissing: true,
-            alwaysLinkToLastBuild: false,
-            keepAll: true,
-            reportDir: 'htmlcov',
-            reportFiles: 'index.html',
-            reportName: 'UT Coverage'
-          ]
           junit 'unit-python.xml'
         }
       }
