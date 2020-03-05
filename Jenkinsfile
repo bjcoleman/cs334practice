@@ -26,6 +26,7 @@ pipeline {
       post {
         always {
           junit 'unit-python.xml'
+          junit 'cov-python.xml'
         }
       }
     }
