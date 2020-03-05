@@ -26,7 +26,7 @@ pipeline {
       post {
         always {
           junit 'unit-python.xml'
-          publishCoverage 'cov-python.xml'
+          cobertura coberturaReportFile: 'cov-python.xml'
         }
       }
     }
